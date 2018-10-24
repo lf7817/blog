@@ -9,22 +9,23 @@ addons:
             - ubuntu-toolchain-r-test
         packages:
             - g++-4.8
-install:
-    - npm install -g vuepress
+# install:
+#     - npm install -g vuepress
 script:
-    - npm run docs:build
+    - bash deploy.sh
 cache:
     directories:
         - "node_modules"
-notifications:
-    email: false
-deploy:
-    provider: pages
-    skip-cleanup: true
-    local_dir: docs/.vuepress/dist
-    github-token: fb9eccd92c2cadad61428423795a161d9711e10e  # Set in the settings page of your repository, as a secure variable
-    repo: lf7817/blog
-    keep-history: true
-    target-branch: gh-pages
-    on:
-        branch: master
+
+# notifications:
+#     email: false
+# deploy:
+#     provider: pages
+#     skip-cleanup: true
+#     local_dir: docs/.vuepress/dist
+#     github-token: fb9eccd92c2cadad61428423795a161d9711e10e  # Set in the settings page of your repository, as a secure variable
+#     repo: lf7817/blog
+#     keep-history: true
+#     target-branch: gh-pages
+#     on:
+#         branch: master
