@@ -12,7 +12,7 @@ addons:
 # install:
 #     - npm install -g vuepress
 script:
-    - bash deploy.sh
+    - npm run deploy
 cache:
     directories:
         - "node_modules"
