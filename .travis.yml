@@ -1,18 +1,14 @@
 language: node_js
+
 node_js:
     - "8"
-# env:
-#     - CXX=g++-4.8
-# addons:
-#     apt:
-#         sources:
-#             - ubuntu-toolchain-r-test
-#         packages:
-#             - g++-4.8
+
 install:
     - npm install
+
 script:
     - npm run docs:build
+    
 cache:
     directories:
         - "node_modules"
@@ -29,16 +25,3 @@ after_script:
 branches:
   only:
     - master
-
-# notifications:
-#     email: false
-# deploy:
-#     provider: pages
-#     skip-cleanup: true
-#     local_dir: docs/.vuepress/dist
-#     github-token: fb9eccd92c2cadad61428423795a161d9711e10e  # Set in the settings page of your repository, as a secure variable
-#     repo: lf7817/blog
-#     keep-history: true
-#     target-branch: gh-pages
-#     on:
-#         branch: master
