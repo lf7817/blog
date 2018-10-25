@@ -18,22 +18,11 @@ deploy:
     skip-cleanup: true
     local_dir: docs/.vuepress/dist
     github-token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
-    # repo: lf7817/blog
     keep-history: true
-    target-branch: gh-pages
+    target-branch: $P_BRANCH
     on:
         branch: master
 
-# after_script:
-#   - cd ./dist
-#   - git init
-#   - git config user.name "${U_NAME}"
-#   - git config user.email "${U_EMAIL}"
-#   - git add .
-#   - git commit -m "deploy"
-# #   - git push -f git@github.com:lf7817/blog.git master:gh-pages
-#   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
-  
 branches:
   only:
     - master
